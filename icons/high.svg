@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff5252" />
+      <stop offset="100%" stop-color="#c62828" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.15" />
+    </filter>
+  </defs>
+  <!-- Shield Shape -->
+  <path d="M64 12 L112 28 C112 70 88 104 64 116 C40 104 16 70 16 28 Z" fill="url(#shieldGrad)" filter="url(#shadow)" />
+  <!-- Border highlight -->
+  <path d="M64 16 L106 30.5 C106 66.5 85.5 96.5 64 107 C42.5 96.5 22 66.5 22 30.5 Z" fill="none" stroke="#ff8a80" stroke-width="3" opacity="0.3" />
+  <!-- Exclamation Point -->
+  <!-- Upper bar -->
+  <rect x="60" y="38" width="8" height="34" rx="4" fill="#ffffff" />
+  <!-- Bottom dot -->
+  <circle cx="64" cy="84" r="5" fill="#ffffff" />
+</svg>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Meta Tags -->
+  <title>TruthGuard - Premium Fake News & Website Detector Extension</title>
+  <meta name="description" content="TruthGuard is a modern Chrome extension that detects fake news and deceptive websites using simulated impact metrics and real-time level indicators. Try the interactive live demo.">
+  <meta name="keywords" content="fake news detector, chrome extension, trustguard, misinformation, verify news, browser security">
+  <meta name="author" content="Vijay Mahes">
+  
+  <!-- Font from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Background Gradients -->
+  <div class="gradient-bg">
+    <div class="grad-circle grad-1"></div>
+    <div class="grad-circle grad-2"></div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="logo">
+      <img src="icons/icon.png" alt="TruthGuard Logo" class="logo-img" id="logo_image">
+      <span class="logo-text">TruthGuard</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#features" class="nav-link" id="nav_link_features">Features</a>
+      <a href="#demo" class="nav-link" id="nav_link_demo">Live Demo</a>
+      <a href="#installation" class="nav-link" id="nav_link_install">Installation</a>
+    </nav>
+    <a href="https://github.com/vijaymahes9080/fake-detector-on-news-and-website_entension" target="_blank" class="github-btn" id="btn_github_repo">
+      <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+      </svg>
+      GitHub
+    </a>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title" id="main_title">Protect Your Mind From <span class="highlight">Fake News</span></h1>
+      <p class="hero-subtitle" id="main_subtitle">
+        TruthGuard is a lightweight Chrome extension that detects misleading articles, sensationalist clickbait, and suspicious websites in real time. Take control of your information diet today.
+      </p>
+      <div class="hero-buttons">
+        <a href="#demo" class="primary-btn" id="btn_hero_demo">Try Live Simulator</a>
+        <a href="#installation" class="secondary-btn" id="btn_hero_install">Install Extension</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Features Section -->
+  <section class="features-section" id="features">
+    <div class="section-header">
+      <h2 class="section-title">Smart Detection, Simple Design</h2>
+      <p class="section-desc">TruthGuard runs silently in the background, analyzing pages instantly and exposing the level of deception.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon-wrapper low-risk-bg">
+          <img src="icons/low.png" alt="Low Risk icon" class="feature-icon">
+        </div>
+        <h3>Verify Authenticity</h3>
+        <p>Identifies established, credible websites and signals a low-risk green status for secure reading environments.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrapper medium-risk-bg">
+          <img src="icons/medium.png" alt="Medium Risk icon" class="feature-icon">
+        </div>
+        <h3>Spot Opinion Bias</h3>
+        <p>Flags sensational content, strong biases, or unverified claims that fall in the orange warning range.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrapper high-risk-bg">
+          <!-- We now have high.svg! -->
+          <img src="icons/high.svg" alt="High Risk icon" class="feature-icon">
+        </div>
+        <h3>Prevent Scams</h3>
+        <p>Uncovers extreme fabrication, dangerous phishing, and fake domains with highly visible red alerts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Section with Live Extension Simulator -->
+  <section class="demo-section" id="demo">
+    <div class="section-header">
+      <h2 class="section-title">See TruthGuard In Action</h2>
+      <p class="section-desc">Use the controller buttons to simulate navigating different websites. Open and interact with the virtual extension popup to see the real-time changes.</p>
+    </div>
+
+    <div class="demo-container">
+      
+      <!-- Controller Panel -->
+      <div class="demo-controls">
+        <h3>1. Select a Website</h3>
+        <p class="control-help">Navigate between the simulated tabs to trigger different risk evaluations.</p>
+        
+        <div class="preset-buttons">
+          <button class="preset-btn active" id="btn_preset_safe" data-type="safe">
+            <span class="status-dot dot-safe"></span>
+            <div class="preset-text">
+              <strong>Reliable Journalism</strong>
+              <span>bbc.com / reuters.com</span>
+            </div>
+          </button>
+          
+          <button class="preset-btn" id="btn_preset_medium" data-type="medium">
+            <span class="status-dot dot-medium"></span>
+            <div class="preset-text">
+              <strong>Sensational Tabloid</strong>
+              <span>tabloidbuzz.net / opinionblogs</span>
+            </div>
+          </button>
+          
+          <button class="preset-btn" id="btn_preset_dangerous" data-type="dangerous">
+            <span class="status-dot dot-dangerous"></span>
+            <div class="preset-text">
+              <strong>Phishing / Fake News</strong>
+              <span>truth-claims-unfiltered.biz</span>
+            </div>
+          </button>
+        </div>
+
+        <div class="action-panel">
+          <h3>2. Open TruthGuard Popup</h3>
+          <p class="control-help">Click the Chrome Extension button in the browser toolbar or click below to toggle the popup.</p>
+          <button class="action-btn" id="btn_toggle_popup_control">Open Extension Popup</button>
+        </div>
+      </div>
+
+      <!-- Browser & Extension Simulator Mockup -->
+      <div class="browser-mockup">
+        
+        <!-- Browser Header/Toolbar -->
+        <div class="browser-header">
+          <div class="browser-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          
+          <!-- Mock Browser Tabs -->
+          <div class="browser-tabs">
+            <div class="browser-tab active" id="browser_tab_title">
+              <img src="icons/low.png" alt="Favicon" class="tab-favicon" id="tab_favicon">
+              <span id="tab_title_text">BBC News - Home</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="browser-toolbar">
+          <div class="nav-arrows">
+            <span class="arrow">&larr;</span>
+            <span class="arrow">&rarr;</span>
+            <span class="arrow">&#8635;</span>
+          </div>
+          
+          <!-- Address Bar -->
+          <div class="address-bar">
+            <span class="lock-icon" id="address_lock">🔒</span>
+            <span class="address-text" id="address_text">https://www.bbc.com/news/world-10294821</span>
+          </div>
+          
+          <!-- Toolbar Icons (Contains TruthGuard Extension Icon) -->
+          <div class="toolbar-icons">
+            <button class="extension-icon-btn" id="btn_extension_icon" title="TruthGuard: Click to view scan details">
+              <img src="icons/icon.png" alt="TruthGuard Extension" class="ext-icon-img">
+              <span class="risk-badge" id="toolbar_risk_badge">LOW</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Browser Viewport / Webpage Content -->
+        <div class="browser-viewport">
+          
+          <!-- Simulated Article Page -->
+          <div class="web-page-content" id="web_page_container">
+            <span class="article-category" id="article_category">GLOBAL NEWS</span>
+            <h2 class="article-title" id="article_title">Global Climate Summit Reaches Landmark Energy Agreement</h2>
+            <div class="article-meta">
+              <span class="article-author">By Sarah Jenkins</span> &bull; 
+              <span class="article-date">Published 2 hours ago</span>
+            </div>
+            <div class="article-img-placeholder" id="article_image_placeholder">
+              <!-- Placeholder styled content -->
+              <div class="img-simulated-graphics"></div>
+            </div>
+            <p class="article-paragraph" id="article_body">
+              Delegates from over 190 nations have finalized a historic agreement on carbon reduction initiatives. The deal establishes firm timelines for phasing out high-emission energy infrastructure while expanding green investment subsidies for developing economies.
+            </p>
+          </div>
+
+          <!-- Glassmorphic Simulated Extension Popup Container -->
+          <div class="simulated-popup-overlay" id="popup_overlay">
+            <div class="simulated-popup" id="truthguard_popup_instance">
+              <div class="popup-header">
+                <h2>TruthGuard</h2>
+                <button class="popup-close-btn" id="btn_close_popup">&times;</button>
+              </div>
+              
+              <div class="popup-body">
+                <p id="sim_status">Detected: Low risk</p>
+                <div class="sim-level-wrapper" id="sim_levelContainer">
+                  <img src="icons/low.png" alt="Low risk icon" id="sim_level_icon">
+                  <span id="sim_level_label">Low risk</span>
+                </div>
+                
+                <div class="sim-impact-card">
+                  <h3>Real-World Impact</h3>
+                  <p id="sim_impactMetric">12%</p>
+                </div>
+
+                <div class="popup-footer-text">
+                  TruthGuard protects your reading feed.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Installation & Developer Setup Section -->
+  <section class="installation-section" id="installation">
+    <div class="section-header">
+      <h2 class="section-title">Install & Load Developer Build</h2>
+      <p class="section-desc">Run this extension locally in your Chrome browser by following these quick developer instructions.</p>
+    </div>
+
+    <div class="installation-steps-container">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h4>Get Codebase</h4>
+        <p>Ensure you have downloaded or cloned this repository to your local computer.</p>
+        <pre class="code-snippet"><code>git clone https://github.com/vijaymahes9080/fake-detector-on-news-and-website_entension.git</code></pre>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h4>Open Extensions</h4>
+        <p>Launch Google Chrome and navigate to the Extensions management screen by typing this URL in your search bar:</p>
+        <pre class="code-snippet"><code>chrome://extensions/</code></pre>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h4>Enable Dev Mode</h4>
+        <p>Locate the <strong>Developer Mode</strong> toggle switch in the top-right corner of the window and turn it <strong>ON</strong>.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <h4>Load Directory</h4>
+        <p>Click the <strong>"Load unpacked"</strong> button in the top-left, and select the folder containing these files.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; 2026 TruthGuard. Open Source under the MIT License.</p>
+    <div class="footer-links">
+      <a href="https://github.com/vijaymahes9080/fake-detector-on-news-and-website_entension" target="_blank" id="footer_github_link">GitHub Repository</a>
+    </div>
+  </footer>
+
+  <!-- Page Logic Script -->
+  <script src="index.js"></script>
+</body>
+</html>
