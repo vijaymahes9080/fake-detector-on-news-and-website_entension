@@ -904,3 +904,9 @@ body {
     text-align: center;
   }
 }
+
+/* Simulated Popup Wrapper transition */
+.simulated-popup-overlay.open .simulated-popup-iframe-wrapper {
+  transform: translateY(0) !important;
+}
+

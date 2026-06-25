@@ -115,38 +115,22 @@ document.addEventListener('DOMContentLoaded', () => {
       articleBody.textContent = data.body;
       articleImgGraphics.style.background = data.imgGrad;
       
-      // Update Popup contents (ready when opened)
-      simStatus.textContent = data.popupStatus;
-      simLevelIcon.src = data.popupIcon;
-      simLevelIcon.alt = data.popupLabel;
-      simLevelLabel.textContent = data.popupLabel;
-      simLevelLabel.style.color = data.popupColor;
-      
-      // Counter animation for impact metric
-      animateCounter(data.impact, data.popupColor);
+      // Update localStorage for TruthGuard Polyfill
+      localStorage.setItem('level', data.badgeClass);
+      localStorage.setItem('impact', data.impact.toString());
+
+      // Trigger storage events to refresh the iframe popup
+      window.dispatchEvent(new StorageEvent('storage', {
+        key: 'level',
+        newValue: data.badgeClass
+      }));
+      window.dispatchEvent(new StorageEvent('storage', {
+        key: 'impact',
+        newValue: data.impact.toString()
+      }));
       
       viewport.style.opacity = '1';
     }, 200);
-  }
-
-  // Counter animation helper
-  function animateCounter(targetValue, color) {
-    if (counterInterval) clearInterval(counterInterval);
-    
-    let currentValue = 0;
-    simImpactMetric.style.color = color;
-    simImpactMetric.textContent = '0%';
-    
-    const step = Math.ceil(targetValue / 15);
-    
-    counterInterval = setInterval(() => {
-      currentValue += step;
-      if (currentValue >= targetValue) {
-        currentValue = targetValue;
-        clearInterval(counterInterval);
-      }
-      simImpactMetric.textContent = `${currentValue}%`;
-    }, 30);
   }
 
   // Toggle Popup view
@@ -156,8 +140,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (shouldOpen) {
       popupOverlay.classList.add('open');
       actionBtn.textContent = 'Close Extension Popup';
-      // Restart counter animation when opened
-      animateCounter(siteData[currentType].impact, siteData[currentType].popupColor);
+      
+      // Sync iframe content reload
+      const iframe = document.getElementById('popupIframe');
+      if (iframe) iframe.contentWindow.location.reload();
     } else {
       popupOverlay.classList.remove('open');
       actionBtn.textContent = 'Open Extension Popup';
